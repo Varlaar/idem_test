@@ -1,0 +1,18 @@
+@import '../../commons/variables.scss';
+@import '../../commons/mixins.scss';
+
+.header {
+    @include flex(row, center, center);
+    background-color: $headerFooterColor;
+    margin-bottom: $marginBottom;
+    height: 90px;
+
+    .header-container {
+        @include flex(row, center, center);
+    }
+
+    &__title {
+        font-size: 24px;
+        font-weight: 400;
+    }
+}

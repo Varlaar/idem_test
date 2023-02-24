@@ -1,0 +1,20 @@
+@import '../../commons/variables.scss';
+@import '../../commons/mixins.scss';
+
+.footer {
+    @include flex(row, center, center);
+    background-color: $headerFooterColor;
+    width: 100%;
+    min-height: 90px;
+
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+
+
+    &__title {
+        font-size: 24px;
+        font-weight: 400;
+    }
+}

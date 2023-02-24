@@ -1,0 +1,50 @@
+@import './commons/variables.scss';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  padding: 0px;
+  margin: 0px;
+  border: none;
+}
+
+body,
+html {
+  font-family: $mainFont;
+  font-weight: 400;
+  font-size: 14px;
+  color: #000;
+  height: 100%;
+}
+
+img,
+svg {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a,
+a:link,
+a:visited {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+input,
+textarea,
+button,
+select {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+}

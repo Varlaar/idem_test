@@ -1,0 +1,8 @@
+@import '../../commons/variables.scss';
+@import '../../commons/media-breakpoints.scss';
+
+@include mobile {
+    .container {
+       padding: 0 20px;
+    }
+}
