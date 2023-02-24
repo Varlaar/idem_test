@@ -1,0 +1,54 @@
+.message {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  position: relative;
+
+  &__arrow {
+    position: absolute;
+    left: 58px;
+    top: 7px;
+    z-index: 1;
+
+    &_left {
+      left: 520px;
+    }
+  }
+
+  &__text {
+    padding: 10px;
+    border-radius: 10px;
+    background: #F1F3F5;
+    border-radius: 5px;
+    max-width: 470px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    z-index: 5;
+  }
+}
+
+.message--user-1+.message--user-2,
+.message--user-2+.message--user-1 {
+  margin-top: 20px;
+}
+
+.message--user-1+.message--user-1,
+.message--user-2+.message--user-2 {
+  margin-top: 20px;
+}
+
+.message--user-1 img {
+  order: 0;
+  margin-right: 18px;
+}
+
+.message--user-2 {
+  justify-content: flex-end;
+}
+
+.message--user-2 img {
+  order: 1;
+  margin-left: 18px;
+}

@@ -1,260 +1,148 @@
 @import '../../commons/variables.scss';
 @import '../../commons/mixins.scss';
-@import '../../commons/media-breakpoints.scss';
-
-
-
-.home-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
-
-    .block1,
-    .block2,
-    .block3,
-    .block4,
-    .block5{
-        @include flex(row, flex-start, flex-end);
-        min-height: 155px;
-        background-color:gray;
-        position: relative;
-    }
-
-    .block3 {
-        grid-column: span 2;
-    }
-
-    .block6 {
-        grid-column: span 2;
-    }
-}
-
-
-
-.block-container2 {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 6px;
-    grid-template-areas: "two one one" "three one one";
-    margin: 10px 0px;
-    margin-right: -10px;
-  }
-  
-  .one {
-    grid-area: one;
-    width: 100%;
-    padding-top: 100%;
-    background-color: red;
-    font-size: 18px;
-    padding: 15px 30px 15px 15px;
-    height: 211px;
-    min-height: 100%;
-    min-width: 100%;
-    font-size: 14px;
-    font-weight: 400;
-    overflow-x: hidden;
-    overflow-y: auto;
-
-    .param {
-        line-height: 1.4;
-
-        &:not(:last-child) {
-            margin-bottom: 50px;
-        }
-      }
-        
-      .param__prop {
-        position: relative;
-        display: block;
-        overflow: hidden;
-      }
-      
-      .param__prop::after{
-        content: '';
-        position: absolute;
-        margin-left: 5px;
-        bottom: .35em;
-        width: 100%;
-        border-bottom: .2em dotted;
-      }
-        
-      .param__value {
-        float: right;
-        padding-left: 5px;
-      }
-
-        
-      /* Modify */
-      .param--align:after {
-        content: '';
-        display: table;
-        clear: both;
-      }
-      
-      .param--align .param__prop {
-        float: left;
-        width: 70%;
-      }
-      
-      .param--align .param__value {
-        float: right;
-        width: 30%;
-        box-sizing: border-box;
-      }
-      
-  }
-  
-  .two {
-    grid-area: two;
-    width: 100%;
-    padding-top: 100%;
-    background-color: blue;
-    position: relative;
-  }
-  
-  .three {
-    grid-area: three;
-    width: 100%;
-    padding-top: 100%;
-    background-color: green;
-    position: relative;
-  }
 
 .home {
-    overflow: hidden;
+  overflow: hidden;
 }
 
-.block-container3 {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 6px;
-    grid-template-areas: "one one two two" "one one three three"; 
-    margin: 10px 0px;
-    margin-right: -10px;
-  }
+.home-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
 
-  .block-container4 {
-    display: grid;
+  &_bottom {
     grid-template-columns: 1fr 1fr;
-    gap: 10px;
+  }
 
+  &__block {
+    @include flex(row, flex-start, flex-end);
+    min-height: 155px;
+    position: relative;
 
-    .block6,
-    .block7,
-    .block8,
-    .block9,
-    .block10 {
-        @include flex(row, flex-start, flex-end);
-        padding: 15px;
-        min-height: 155px;
-        min-width: auto;
-        background-color:gray;
-        order: 2;
-        position: relative;
-    }
+    &_grey {
+      background-color: $backgroundColor--grey;
 
-
-    .block6 {
+      &:nth-child(3) {
         grid-column: span 2;
+      }
+    }
+
+    &_blue {
+      background-color: $backgroundColor--blue;
+    }
+
+    &_yellow {
+      background-color: $backgroundColor--yellow
+    }
+
+    &_peach {
+      background-color: $backgroundColor--peach;
+
+      &:nth-child(1) {
+        grid-column: span 2;
+      }
+    }
+
+    &_red {
+      background-color: $backgroundColor--red;
+    }
+
+    &_violet {
+      background-color: $backgroundColor--violet
     }
   }
+}
 
-  h4 {
-    position: absolute;
-    font-weight: 400;
-    bottom: 15px;
-    left: 15px;
+.home-container-square {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 6px;
+  grid-template-areas: "two one one" "three one one";
+  margin: 10px 0px;
+  margin-right: -10px;
+}
+
+.home-container-square__block {
+  grid-area: one;
+  width: $width;
+  padding-top: $width;
+  background-color: #A2A9B7;
+  font-size: 18px;
+  padding: 15px 30px 15px 15px;
+  height: 211px;
+  min-height: $width;
+  min-width: $width;
+  font-weight: $fw400;
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  &_background {
+    background-color: $backgroundColor;
   }
 
+  ul li,
+ol li {
+  list-style: none;
+}
 
+ol li {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
 
+li div:nth-child(2) {
+  flex: 1 0;
+  border-bottom: 2px dotted #000;
+}
 
-// media
-
-@include mobile {
-    .home-container {
-        grid-template-columns: 3fr 1fr 1fr;
-        grid-auto-flow: row dense;
-
-        .block1 {
-            order: 1;
-        }
-    
-        .block2 {
-            order: 2;
-        }
-    
-        .block3 {
-            order: 4;
-        }
-    
-        .block4 {
-            order: 3;
-        }
-    
-        .block5 {
-            order: 5;
-        }
-
+li div {
+  margin-left: 10px;
+  margin-bottom: 30px;
+}
 
 }
 
-.block-container2,
-.block-container3 {
-    gap: 10px;
-   }
+.home-container-square__block-small {
+  grid-area: two;
+  width: $width;
+  padding-top: $width;
+  background-color: #A2A9B7;
+  position: relative;
 
-   .home-container {
-    grid-template-columns: 1fr 1fr 1fr;
-   }
-   
-
-   .block-container4 {
-    grid-template-columns: 1fr 1fr 1fr;
-    margin-top: 10px;
-
-
-    .block6 {
-        order: 2;
-    }
-
-    .block7 {
-        order: 4;
-    }
-
-    .block8 {
-        order: 5;
-    }
-
-    .block9 {
-        order: 1;
-    }
-
-    .block10 {
-        order: 3;
-    }
-    }
-}
-
-
-
-@media(max-width: 480px) {
-   .block-container2 {
-      display: none;
-    }
-
-     .block-container3_top {
-      display: none;
-    }
-
-}
-
-@media(min-width: 480px) {
-  .block-container3_bottom {
-    display: none;
+  &_grid-area {
+    grid-area: three;
   }
 
+  &_background {
+    background-color: $backgroundColor;
+  }
+
+  &_background-image {
+    background: url(../../assets/images/staff-background.png) no-repeat;
+    background-size: cover;
+    min-width: $width;
+    color: $fontWhiteColor;
+
+    &:hover {
+      filter: blur(5px);
+      transition: 0.3s ease;
+    }
+  }
 }
- 
 
+.block-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 6px;
+  grid-template-areas: "one one two two" "one one three three";
+  margin: 10px 0px;
+  margin-right: -10px;
+}
 
+h4 {
+  position: absolute;
+  font-weight: 400;
+  bottom: 15px;
+  left: 15px;
+}

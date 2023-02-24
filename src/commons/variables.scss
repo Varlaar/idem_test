@@ -1,22 +1,35 @@
 /* fonts */
 $mainFont: 'Roboto', sans-serif;
+$ProximaNova: 'Proxima Nova', sans-serif;
+$NotoSans: 'Noto Sans', sans-serif;
 
 /* general */
-$wrapper: 2600px;
-$container: 1305px;
 $mc: 0 auto;
 $marginBottom: 10px;
+$width: 100%;
+$fw400: 400;
+$fw700: 700;
+$fz24: 24px;
 
 /* colors */
+$fontWhiteColor: #fff;
+$backgroundColor: #E3EBD3;
+$backgroundColor--grey: #E8EBED;
+$backgroundColor--blue: #90BCE8;
+$backgroundColor--yellow: #FEBF26;
+$backgroundColor--red: #F55E62;
+$backgroundColor--violet: #C7ABD4;
+$backgroundColor--peach: #FFAA87;
 $headerFooterColor: #c4c4c4;
+$dataColor: #DBDBDB;
+$textArea: #696969;
+$textAreaBorder: 1px solid #DBDBDB;
+$buttonSubmitColor: #0F54B9;
+$buttonSubmitColor--hover: #06347a;
 
+/* shadows */
+$buttonSubmitShadow: 0px 4px 6px rgba(15, 84, 185, 0.3);
+$buttonSubmitShadow--hover: 0px 4px 6px rgba(6, 50, 116, 0.3);
 
-$background-color: #b8860b;
-$background-color--hover: #dda20d;
-$border-radius: 5px;
-$button-font-size: 16px;
-$color-font--white: #fff;
-$font-weight--bold: 700;
-$text-align--center: center;
-$transition: 0.2s linear;
-$cursor: pointer;
+/* transitions */
+$transition: ease 0.3s;

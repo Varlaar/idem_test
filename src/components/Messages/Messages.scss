@@ -5,14 +5,13 @@
     padding: 40px 20px 30px 20px;
     max-height: 651px;
     overflow: scroll;
-    overflow-x: hidden; 
-    width: 100%;
+    overflow-x: hidden;
+    width: $width;
     max-width: 651px;
-    margin: 0 auto;
-    border-bottom: 1px solid #DBDBDB;
+    margin: $mc;
+    border-bottom: $textAreaBorder;
 
     .data {
-        // overflow: hidden;
         text-align: center;
         font-size: 14px;
         line-height: 24px;
@@ -30,9 +29,9 @@
         content: "";
         display: inline-block;
         vertical-align: middle;
-        width: 100%;
+        width: $width;
         height: 1px;
-        background-color: #DBDBDB;
+        background-color: $dataColor;
         position: relative;
     }
 
@@ -40,10 +39,9 @@
         margin-left: -100%;
         left: -30px;
     }
+
     .data:after {
         margin-right: -100%;
         right: -30px;
     }
-  }
-  
-
+}

@@ -4,17 +4,14 @@
 .footer {
     @include flex(row, center, center);
     background-color: $headerFooterColor;
-    width: 100%;
+    width: $width;
     min-height: 90px;
-
     position: absolute;
     left: 0;
     bottom: 0;
 
-
-
     &__title {
-        font-size: 24px;
-        font-weight: 400;
+        font-size: $fz24;
+        font-weight: $fw400;
     }
 }

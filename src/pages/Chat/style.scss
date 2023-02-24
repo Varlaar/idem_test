@@ -6,27 +6,27 @@
     background-image: url(../../assets/images/background.png);
     background-size: cover;
     min-height: 100vh;
-    width: 100%;
+    width: $width;
 
     .chat-container {
         max-width: 651px;
-        width: 100%;
-        margin: 0 auto;
+        width: $width;
+        margin: $mc;
         padding: 0 20px;
     }
 
-
     &__message-field {
         background: #FFFFFF;
-        border: 1px solid #DBDBDB;
+        border: $textAreaBorder;
         border-radius: 4px;
         max-width: 590px;
         width: 100%;
         min-height: 129px;
         margin-top: 20px;
         padding: 10px;
-        color: #696969;
+        color: $textArea;
         resize: none;
+        font-family: $NotoSans;
 
         &:focus {
             outline: none;
@@ -34,23 +34,25 @@
     }
 
     &__bth-submit {
-        background: #0F54B9;
-        box-shadow: 0px 4px 6px rgba(15, 84, 185, 0.3);
+        background: $buttonSubmitColor;
+        box-shadow: $buttonSubmitShadow;
         border-radius: 21px;
         max-width: 144px;
         width: 100%;
-        height: 41px;
+        min-height: 41px;
         color: #fff;
         margin-top: 20px;
         text-align: center;
         font-size: 16px;
         line-height: 24px;
         margin-bottom: 30px;
+        font-family: $ProximaNova;
+        font-weight: $fw700;
 
         &:hover {
-            background: #06347a;
-            box-shadow: 0px 4px 6px rgba(6, 50, 116, 0.3);
-            transition: ease 0.3s;
+            background: $buttonSubmitColor--hover;
+            box-shadow: $buttonSubmitShadow--hover;
+            transition: $transition;
         }
     }
 }
