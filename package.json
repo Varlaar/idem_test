@@ -18,7 +18,7 @@
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "start": "https://nameaccount.github.io/idem_test",
+    "start": "https://Varlaar.github.io/idem_test",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
